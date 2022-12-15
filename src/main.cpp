@@ -23,8 +23,8 @@ const char* ntpServer = "np.pool.ntp.org";
 const long  gmtOffset_sec = 20700;
 const int   daylightOffset_sec = 0;
 
-float hum;  //Stores humidity value
-float temp; //Stores temperature value
+float hum; 
+float temp;
 
 struct tm timeinfo;
 
@@ -240,7 +240,7 @@ void loop()
   temp = dht.readTemperature();
  
  
-  if (isnan(hum) || isnan(temp) )  // Check if any reads failed and exit early (to try again).
+  if (isnan(hum) || isnan(temp) )
   {
     Serial.println(F("Failed to read from DHT sensor!"));
     delay(2000);
